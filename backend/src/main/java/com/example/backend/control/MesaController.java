@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author rfdouro
  *
  * a anotação CrossOrigin serve para habilitar a
  * comunicação entre diferentes domínios
