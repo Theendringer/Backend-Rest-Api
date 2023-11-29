@@ -42,15 +42,15 @@ public class MesaController {
 
 
  /*
-insere automaticamente um repositório de dados para tarefas
+insere automaticamente um repositório de dados para mesas
   */
  @Autowired
  MesaRepository repository;
 
 
  /*
-método que retorna a listagem de tarefas ordenada por descrição
-atende no endpoint /tarefa com verbo GET
+método que retorna a listagem de mesas ordenada por descrição
+atende no endpoint /mesa com verbo GET
   */
  @GetMapping({"", "/"})
  public List<Mesa> getMesas() {
@@ -59,9 +59,9 @@ atende no endpoint /tarefa com verbo GET
 
 
  /*
-método que recebe uma tarefa enviada na requisição e a insere no banco de dados
+método que recebe uma mesa enviada na requisição e a insere no banco de dados
 retorta após inserir já com o ID
-atende no endpoint /tarefa com verbo POST
+atende no endpoint /mesa com verbo POST
 a anotação @RequestBody é importante pois indica que os dados da requisição
 serão enviados no corpo da requisição (em JSON)
   */
@@ -74,11 +74,11 @@ serão enviados no corpo da requisição (em JSON)
 
 
  /*
-método que recebe uma tarefa enviada na requisição (com id preenchido)
+método que recebe uma mesa enviada na requisição (com id preenchido)
 e a atualiza no banco de dados
-retorta a tarefa atualizada
+retorta a mesa atualizada
 caso não tenha id na requisição retorna null
-atende no endpoint /tarefa com verbo PUT
+atende no endpoint /mesa com verbo PUT
 a anotação @RequestBody é importante pois indica que os dados da requisição
 serão enviados no corpo da requisição (em JSON)
   */
@@ -92,7 +92,7 @@ serão enviados no corpo da requisição (em JSON)
 
 
  /*
-método que recebe um id de tarefa enviada na requisição
+método que recebe um id de mesa enviada na requisição
 caso tenha enviado o id, é excluída no banco de dados
 retorta uma mensagem
 o id é passado no path (caminho da url) por isso
